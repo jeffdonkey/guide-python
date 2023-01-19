@@ -1,5 +1,6 @@
 ## stated this with instruction from https://realpython.com/python3-object-oriented-programming/
 ## using material from YouTube creator Corey Schafer and his series on Python OOP
+## using various other resources
 
 
 # Classes are used to create data structures used in Object-Oriented Programming (OOP) in Python.
@@ -118,7 +119,62 @@ class Dog:
 dog1 = Dog('Lottie', 'Spottygirl', 6)
 dog2 = Dog('Sampson', 'Goodboy', 9)
 
-print(dog2.fullname)  # will display 'Lottie'
+print(dog2.fullname)  # will display 'Sampson Goodboy'
 
     # made changes to this example code to use a first name and last name.
     # line 116 sets an class attribute called 'fullname'.
+
+
+#--------------------------------------------------------------------------------
+
+# Multiple METHODS (functions) within a CLASS
+
+class Dog:
+
+    species = 'Canis Familiaris'
+
+    def __init__(self, firstname, lastname, age):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+
+    def fullname(self):
+        return '{} {}'.format(self.firstname, self.lastname)
+        
+        
+dog1 = Dog('Lottie', 'Spottygirl', 6)
+dog2 = Dog('Sampson', 'Goodboy', 9)
+
+print(dog2.fullname())  # will display 'Sampson Goodboy'
+
+    # lines 141-142 are a second method within the class 'Dog'.  In the method 'fullname' we send in the argument 'self'
+        # to tie the insatance of the data received by class 'Dog'.  DOT NOTATION is used to access 'firstname' and 'lastname'
+    # line 142: '{} {}' is a placeholder; '.format' will move the values of 'firstname' and 'lastname' into the placeholders.
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+# The '.__str__():' method.
+
+class Dog:
+
+    species = 'Canis Familiaris'
+
+    def __init__(self, firstname, lastname, age):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+
+    def __str__(self):
+        return f'{self.firstname} is {self.age} years old'
+      
+        
+dog1 = Dog('Lottie', 'Spottygirl', 6)
+dog2 = Dog('Sampson', 'Goodboy', 9)
+
+print(dog1)  # displays 'Lottie is 6 years old'
+
+    # '.__str__()' is called and DUNDER METHOD due the the double-underscores.  '.__init__()' is also a DUNDER METHOD
+        # '.__str__()' is used to make the object returned a STRING
+
+#------------------------------------------------------------------------------------------------------------------------
+
