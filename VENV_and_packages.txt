@@ -1,0 +1,2 @@
+VENV and Python Packages is very similar to NPM used for JavaScript
+
