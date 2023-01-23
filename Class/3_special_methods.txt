@@ -1,0 +1,18 @@
+SPECIAL METHODS
+
+Special Methods are exclusive to Python Classes.  They are also known as "Magic" methods or "Dunder" methods.
+
+Syntax:
+
+def __<identifier>__(argument):
+
+
+Examples:
+
+    def __init__(self):         argument 'initializer' found at the beginning of Python Classes
+    def __str__(self):          return is a 'string'
+    def __lt__(self, other):    "<", less than. Return is a boolean.
+    def __ne__(self,other):     "!=", not equal. Return is a boolean.
+
+# More special methods can be found at https://docs.python.org/3/reference/datamodel.html#special-method-names
+

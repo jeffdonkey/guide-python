@@ -1,2 +1,21 @@
 VENV and Python Packages is very similar to NPM used for JavaScript
 
+VENV- virtual enviroment
+use Virtual Enviroment to seperate code into it's own enviroment.  Usefule
+    when wanted to use packages and/or versions that will not apply to your
+    global Python set-up
+
+PIP- package manager for Python
+    PIP WILL INSTALL PACKAGES GLOBALLY 
+    FOR PYTHON INVOLVED PROJECTS CREATE A VENV BEFORE LOADING PACKAGES
+
+popular packages for web development:
+    Django (web)
+    Flask (web)
+    Requests (API)
+
+command to instantiate and VENV from CMD/IDLE/Terminal
+python3 -m venv enviromentName
+
+in GitBash
+source venv/bin/activate  YOU DO NEED A DEACTIVATE COMMAND TO STOP USING
